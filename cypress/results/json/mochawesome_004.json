@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-08T10:32:47.760Z",
+    "end": "2021-03-08T10:32:50.046Z",
+    "duration": 2286,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4c810476-f51e-4744-bf53-0e2276b5b8a8",
+      "title": "",
+      "fullFile": "cypress\\integration\\api_test_spec.js",
+      "file": "cypress\\integration\\api_test_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aaee6b13-1cf0-403d-baf9-82b27d56f67b",
+          "title": "all api test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET 1",
+              "fullTitle": "all api test GET 1",
+              "timedOut": null,
+              "duration": 816,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('GET', '/users?page=2').then(function (response) {\n  expect(response).to.have.property('status', 200);\n  expect(response.status).to.equal(200);\n  expect(response.body).not.to.be[\"null\"];\n  expect(response.body).to.have.property('page', 2);\n  expect(response.body.data).to.have.length(6); //  expect(response.body.data).to.have.length(5)\n});",
+              "err": {},
+              "uuid": "ce2c9c6f-e6ab-4231-8f1f-083378976ccc",
+              "parentUUID": "aaee6b13-1cf0-403d-baf9-82b27d56f67b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "GET 2",
+              "fullTitle": "all api test GET 2",
+              "timedOut": null,
+              "duration": 269,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('GET', '/users?page=2').as('user_list');\ncy.get('@user_list').should(function (response) {\n  expect(response).to.have.property('status', 200);\n  expect(response.status).to.equal(200);\n  expect(response.body).not.to.be[\"null\"];\n  expect(response.body).to.have.property('page', 2);\n  expect(response.body.data).to.have.length(6);\n});",
+              "err": {},
+              "uuid": "8b32f6d1-06dd-4e8e-ba9c-6d4bd902ef76",
+              "parentUUID": "aaee6b13-1cf0-403d-baf9-82b27d56f67b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "GET 3",
+              "fullTitle": "all api test GET 3",
+              "timedOut": null,
+              "duration": 275,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  'method': 'GET',\n  'url': '/users?page=2' // headers : {\n  //     '' :''\n  //     },\n  // auth :{\n  //     '':''\n  // }  \n}).should(function (response) {\n  expect(response).to.have.property('status', 200);\n  expect(response.status).to.equal(200);\n  expect(response.body).not.to.be[\"null\"];\n  expect(response.body).to.have.property('page', 2);\n  expect(response.body.data).to.have.length(6);\n});",
+              "err": {},
+              "uuid": "70b1d315-bfff-4035-b5c1-ed2ab976ed54",
+              "parentUUID": "aaee6b13-1cf0-403d-baf9-82b27d56f67b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST 1",
+              "fullTitle": "all api test POST 1",
+              "timedOut": null,
+              "duration": 297,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  'method': 'POST',\n  'url': '/users',\n  'body': {\n    \"name\": \"Akash\",\n    \"job\": \"teacher\"\n  }\n}).should(function (response) {\n  expect(response).to.have.property('status', 201);\n  expect(response.status).to.equal(201);\n  expect(response.body).not.to.be[\"null\"];\n});",
+              "err": {},
+              "uuid": "f2baeda1-ec99-4cd2-861f-a81fd3bf584d",
+              "parentUUID": "aaee6b13-1cf0-403d-baf9-82b27d56f67b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "PUT 1",
+              "fullTitle": "all api test PUT 1",
+              "timedOut": null,
+              "duration": 291,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  'method': 'PUT',\n  'url': 'users/2',\n  body: {\n    \"name\": \"Akash\",\n    \"job\": \"zion resident\"\n  }\n}).should(function (response) {\n  expect(response).to.have.property('status', 200);\n  expect(response.status).to.equal(200);\n  expect(response.body).not.to.be[\"null\"];\n});",
+              "err": {},
+              "uuid": "614e6523-fa81-44c3-b823-e8863ea671aa",
+              "parentUUID": "aaee6b13-1cf0-403d-baf9-82b27d56f67b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete 1",
+              "fullTitle": "all api test Delete 1",
+              "timedOut": null,
+              "duration": 248,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  'method': 'DELETE',\n  'url': 'users/2'\n}).should(function (response) {\n  expect(response).to.have.property('status', 204);\n  expect(response.status).to.equal(204);\n  expect(response.body).not.to.be[\"null\"];\n});",
+              "err": {},
+              "uuid": "d4a1ef7f-8a05-4431-b92f-b6987c690b2c",
+              "parentUUID": "aaee6b13-1cf0-403d-baf9-82b27d56f67b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ce2c9c6f-e6ab-4231-8f1f-083378976ccc",
+            "8b32f6d1-06dd-4e8e-ba9c-6d4bd902ef76",
+            "70b1d315-bfff-4035-b5c1-ed2ab976ed54",
+            "f2baeda1-ec99-4cd2-861f-a81fd3bf584d",
+            "614e6523-fa81-44c3-b823-e8863ea671aa",
+            "d4a1ef7f-8a05-4431-b92f-b6987c690b2c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2196,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

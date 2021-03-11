@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-03-04T09:48:55.433Z",
+    "end": "2021-03-04T09:49:06.704Z",
+    "duration": 11271,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8297f8c3-7d38-428d-b65a-93d7b0e84fae",
+      "title": "",
+      "fullFile": "cypress\\integration\\login.ts",
+      "file": "cypress\\integration\\login.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "904a2fc9-7146-453a-987c-faee31344e0a",
+          "title": "allLoginTest",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login test-valid cred",
+              "fullTitle": "allLoginTest login test-valid cred",
+              "timedOut": null,
+              "duration": 5245,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"Failed screenshot\",\n  \"value\": \"screenshots\\\\login.ts\\\\allLoginTest -- login test-valid cred (failed).png\"\n}",
+              "code": "loginpage.loginWithValidCredentials('test', 'test1');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Login Successful' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Login Successful' but never did.\n    at LoginPage../cypress/pages/login_page.ts.LoginPage.loginWithValidCredentials (https://trytestingthis.netlify.app/__cypress/tests?p=cypress\\integration\\login.ts:148:12)\n    at Context.eval (https://trytestingthis.netlify.app/__cypress/tests?p=cypress\\integration\\login.ts:109:19)",
+                "diff": null
+              },
+              "uuid": "925bfa60-eeab-4f17-ae18-747c81b12440",
+              "parentUUID": "904a2fc9-7146-453a-987c-faee31344e0a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login test-invalid cred",
+              "fullTitle": "allLoginTest login test-invalid cred",
+              "timedOut": null,
+              "duration": 3923,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginpage.loginWithInvalidCredentials('test1', '123');",
+              "err": {},
+              "uuid": "a186284d-a23f-4cce-92b1-51e8690fb71b",
+              "parentUUID": "904a2fc9-7146-453a-987c-faee31344e0a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a186284d-a23f-4cce-92b1-51e8690fb71b"
+          ],
+          "failures": [
+            "925bfa60-eeab-4f17-ae18-747c81b12440"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9168,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

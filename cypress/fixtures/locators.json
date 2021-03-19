@@ -1,0 +1,8 @@
+{
+    "URL":"https://www.bigbasket.com/",
+    "SearchBarInputField":"#input",
+    "ItemNo2FromAutoSuggestion":"ul.search-item-suggesion>li:nth-child(2)>div>div.form-group.product-info.hidden-xs > a > p.brand",
+    "QuantityText":"input[aria-label=basketQtyInput]",
+    "AddToBasketButton":"div[data-qa=addToBasket]"
+
+}
